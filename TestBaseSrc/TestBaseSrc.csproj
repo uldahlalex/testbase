@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+
+        <Version>1.1.0</Version>
+        <Authors>Alex Uldahl Pedersen</Authors>
+        <Description>TestBase project for unit tests</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/uldahlalex/testbase</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/uldahlalex/testbase</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>TestBase Xunit Postgres</PackageTags>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>UldahlAlex.TestBase</PackageId>
+        <RootNamespace>testbase</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.*" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.*"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.*" />
+        <PackageReference Include="Testcontainers.PostgreSql" Version="3.*" />
+    </ItemGroup>
+
+</Project>
