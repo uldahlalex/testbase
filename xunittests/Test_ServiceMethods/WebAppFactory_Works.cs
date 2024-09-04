@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using Nito.AsyncEx;
 using TestUtilities;
 using Xunit.Abstractions;
 
@@ -23,7 +22,6 @@ namespace UnitTests;
         {
             _client = factory.CreateClient();
             _testUtils = new TestUtils<HospitalContext>();
-            AsyncContext.Run(() => _testUtils.Setup());
  
         }
         

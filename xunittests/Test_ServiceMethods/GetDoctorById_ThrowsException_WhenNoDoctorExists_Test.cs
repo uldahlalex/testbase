@@ -8,11 +8,11 @@ using Xunit.Abstractions;
 
 namespace UnitTests;
 
-    public class GetDoctorById_GetsExistingDoctor_ReturnsDoctorDtoTest 
+    public class GetDoctorById_ThrowsException_WhenNoDoctorExists_Test 
     {
         private readonly TestUtils<HospitalContext> _testUtils;
         
-        public GetDoctorById_GetsExistingDoctor_ReturnsDoctorDtoTest(
+        public GetDoctorById_ThrowsException_WhenNoDoctorExists_Test(
             ITestOutputHelper outputHelper)
 
         {
@@ -24,7 +24,6 @@ namespace UnitTests;
                     return new GetById(context);
                 });
             });
-            AsyncHelper.RunSync(() => _testUtils.Setup());
    
         }
 
